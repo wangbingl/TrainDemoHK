@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用于程序或者活动的主题 -->
+    <style name="CustomActionBarTheme_30" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_30</item>
+    </style>
+    <!-- ActionBar 样式 -->
+    <style name="MyActionBar_30" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@android:color/holo_orange_light</item>
+    </style>
+
+
+    <!-- 应用于程序或者活动的主题 -->
+    <style name="CustomActionBarTheme_21" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar_21</item>
+    </style>
+    <!-- ActionBar 样式 -->
+    <style name="MyActionBar_21" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@android:color/holo_orange_light</item>
+    </style>
+
+</resources>

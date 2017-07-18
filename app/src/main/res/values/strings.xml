@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TrainDemoHK</string>
+    <string name="title_activity_custom_action_bar">CustomActionBarActivity</string>
 </resources>

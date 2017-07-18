@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.train._1started.CustomActionBarActivity_Up30"
+            android:theme="@style/CustomActionBarTheme_30" />
+        <activity
+            android:name="com.train._1started.CustomActionBarActivity_Up21"
+            android:theme="@style/CustomActionBarTheme_21" />
+        <activity android:name="com.train._1started.SaveDataActivity"></activity>
     </application>
 
 </manifest>
