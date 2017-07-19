@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">TrainDemoHK</string>
     <string name="title_activity_custom_action_bar">CustomActionBarActivity</string>
+
+    <string name="save_data_preference">Save to Preference</string>
+    <string name="save_data_file">Save to File</string>
+    <string name="save_data_db">Save to Database</string>
+
+    <string name="manage_audio_in_volume">Increase the volume</string>
+    <string name="manage_audio_de_volume">Decrease the volume</string>
+    <string name="camera_take_photo">Take Vedio</string>
+    <string name="camera_take_video">Take video</string>
 </resources>
