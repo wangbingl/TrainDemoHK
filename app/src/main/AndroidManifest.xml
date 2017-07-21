@@ -36,7 +36,9 @@
         <activity android:name="com.train._3multimedia.PrintingActivity" />
         <activity android:name="com.train._4graphics_anim.DisplayBitmapActivity" />
         <activity android:name="com.train._4graphics_anim.OpenGLESActivity" />
-        <activity android:name="com.train._4graphics_anim.AnimationActivity"></activity>
+        <activity android:name="com.train._4graphics_anim.AnimationActivity" />
+        <activity android:name="com.train._4graphics_anim.CrossfadeActivity" />
+        <activity android:name="com.train._4graphics_anim.ScreenSlideActivity"></activity>
     </application>
 
 </manifest>

@@ -10,4 +10,6 @@
     <string name="manage_audio_de_volume">Decrease the volume</string>
     <string name="camera_take_photo">Take Vedio</string>
     <string name="camera_take_video">Take video</string>
+
+    <string name="lorem_ipsum">nothing</string>
 </resources>

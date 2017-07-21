@@ -4,8 +4,10 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.gl.traindemohk.R;
 
@@ -17,7 +19,7 @@ public class DisplayBitmapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_bitmap);
-
+        findViewById(R.id.display_bitmap_fragment_container).setVisibility(View.VISIBLE);
         if (savedInstanceState == null) {
             DisplayBitmapFragment411 fragment411 = new DisplayBitmapFragment411();
             getSupportFragmentManager().beginTransaction().add(R.id.display_bitmap_fragment_container, fragment411).commit();
@@ -85,6 +87,26 @@ public class DisplayBitmapActivity extends AppCompatActivity {
 
 
          */
+
+
+        public static class ImagePagerAdapter extends FragmentStatePagerAdapter {
+            private final int mSize;
+
+            public ImagePagerAdapter(FragmentManager fm, int size) {
+                super(fm);
+                mSize = size;
+            }
+
+            @Override
+            public Fragment getItem(int position) {
+                return null;
+            }
+
+            @Override
+            public int getCount() {
+                return mSize;
+            }
+        }
     }
 
 
