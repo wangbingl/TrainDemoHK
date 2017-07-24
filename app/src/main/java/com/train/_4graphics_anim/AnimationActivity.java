@@ -55,6 +55,16 @@ public class AnimationActivity extends AppCompatActivity {
                 }
                 return true;
             case R.id.action_card_flip:
+
+
+                fragment = getSupportFragmentManager().findFragmentByTag(FRAGMENT_TAG_CARD_FLIP);
+                if (fragment == null) {
+                    fragment = new CardFlipFragment();
+                    getSupportFragmentManager().beginTransaction().add(R.id.anim_fragment_container, fragment, FRAGMENT_TAG_CARD_FLIP).commit();
+                } else {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.anim_fragment_container, fragment).commit();
+                }
+
                 return true;
             case R.id.action_view_zoom:
                 return true;

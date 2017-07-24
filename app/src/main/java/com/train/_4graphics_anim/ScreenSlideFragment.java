@@ -90,7 +90,7 @@ public class ScreenSlideFragment extends Fragment {
 
     // 动画目标：当在相邻界面滑动时，这个Page Transformer使页面收缩并褪色。当页面越靠近中心，它将渐渐还原到正常大小并且图像渐入。
 
-    class ZoomOutPageTransformer implements ViewPager.PageTransformer{
+    class ZoomOutPageTransformer implements ViewPager.PageTransformer {
 
         private static final float MIN_SCALE = 0.85f;
         private static final float MIN_ALPHA = 0.5f;
@@ -100,35 +100,35 @@ public class ScreenSlideFragment extends Fragment {
             int pageWidth = page.getWidth();
             int pageHeight = page.getHeight();
 
-            if (position < -1){ // [-Infinity(负无穷大),-1)
+            if (position < -1) { // [-Infinity(负无穷大),-1)
                 // This page is way off-screen to the left.  左边离开屏幕
                 page.setAlpha(0);
 
-            }else if (position <= 1){ // [-1,1]
+            } else if (position <= 1) { // [-1,1]
                 // Modify the default slide transition to shrink the page as well  做成缩小动画
-                float scaleFactor = Math.max(MIN_SCALE,1-Math.abs(position));
+                float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
 
                 // 定义X 位移
 
                 // 垂直间距
-                float vertMargin = pageHeight * (1-scaleFactor) / 2;
+                float vertMargin = pageHeight * (1 - scaleFactor) / 2;
                 // 水平间距
-                float horzMargin = pageWidth* (1-scaleFactor) / 2;
+                float horzMargin = pageWidth * (1 - scaleFactor) / 2;
 
-                if (position <0){
-                    page.setTranslationX(horzMargin - vertMargin/2);
+                if (position < 0) {
+                    page.setTranslationX(horzMargin - vertMargin / 2);
 
-                }else {
-                    page.setTranslationX(-horzMargin + vertMargin/2);
+                } else {
+                    page.setTranslationX(-horzMargin + vertMargin / 2);
                 }
                 // 定义缩放
                 page.setScaleX(scaleFactor);
                 page.setScaleY(scaleFactor);
 
                 // 定义透明度
-                page.setAlpha(MIN_ALPHA + (scaleFactor - MIN_SCALE)/(1-MIN_SCALE)*(1-MIN_ALPHA));
+                page.setAlpha(MIN_ALPHA + (scaleFactor - MIN_SCALE) / (1 - MIN_SCALE) * (1 - MIN_ALPHA));
 
-            } else{ // [1, 无穷大]
+            } else { // [1, 无穷大]
                 page.setAlpha(0);
 
             }

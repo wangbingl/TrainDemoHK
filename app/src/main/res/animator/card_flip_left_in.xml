@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--卡片翻转  左进入（向右翻转）-->
+
+    <!-- Before rotating, immediately set the alpha to 0.翻转前，透明度设为0 -->
+    <objectAnimator
+        android:valueFrom="1.0"
+        android:valueTo="0.0"
+        android:propertyName="alpha"
+        android:duration="0" />
+
+
+</set>
