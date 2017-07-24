@@ -2,12 +2,15 @@ package com.train._4graphics_anim;
 
 import android.animation.Animator;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.gl.traindemohk.R;
 
-public class CrossfadeActivity extends AppCompatActivity {
+public class CrossFadeFragment extends Fragment {
 
     // 步骤 一： 设置动画
 
@@ -15,22 +18,29 @@ public class CrossfadeActivity extends AppCompatActivity {
     private View mLoadingView;
     private int mShortAnimationDuration;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crossfade);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_crossfade, container, false);
+    }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        mContentView = findViewById(R.id.content);
-        mLoadingView = findViewById(R.id.loading_spinner);
+        mContentView = view.findViewById(R.id.content);
+        mLoadingView = view.findViewById(R.id.loading_spinner);
 
         // Initially hide the content view.
         mContentView.setVisibility(View.GONE);
 
         // Retrieve and cache the system's default "short" animation time.
         mShortAnimationDuration = getResources().getInteger(
-                android.R.integer.config_shortAnimTime);
+                android.R.integer.config_longAnimTime);
+
+        crossfade();
     }
+
 
     // 步骤二 ：渐变View
 
