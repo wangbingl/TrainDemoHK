@@ -52,12 +52,12 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 practiceFragment = new MyPracticeFragment();
             }
 
-            final FragmentTransaction transaction = manager.beginTransaction();
-            transaction.add(R.id.main_viewpager, trainFragment, TRAIN_TAG);
-            transaction.add(R.id.main_viewpager, practiceFragment, PRACTICE_TAG);
-            transaction.hide(trainFragment);
-            transaction.hide(practiceFragment);
-            transaction.commit();
+//            final FragmentTransaction transaction = manager.beginTransaction();
+//            transaction.add(R.id.main_viewpager, trainFragment, TRAIN_TAG);
+//            transaction.add(R.id.main_viewpager, practiceFragment, PRACTICE_TAG);
+//            transaction.hide(trainFragment);
+//            transaction.hide(practiceFragment);
+//            transaction.commit();
 
         }
     }
@@ -67,10 +67,10 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         switch (position) {
             case 0:
-                getSupportActionBar().setTitle(getString(R.string.app_name));
+                getSupportActionBar().setTitle(getString(R.string.title_tab_train));
                 break;
             case 1:
-                getSupportActionBar().setTitle(getString(R.string.title_fragment_my_practice));
+                getSupportActionBar().setTitle(getString(R.string.title_tab_practice));
                 break;
             default:
                 getSupportActionBar().setTitle(getString(R.string.app_name));

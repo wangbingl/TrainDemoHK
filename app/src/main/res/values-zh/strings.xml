@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">培训HK</string>
+    <string name="title_tab_train">培训</string>
+    <string name="title_tab_practice">实践</string>
+
+    <string name="anim_cross_fade">View渐变</string>
+    <string name="anim_screen_slide">使用ViewPager实现屏幕滑动</string>
+    <string name="anim_card_flip">展示Card翻转动画</string>
+    <string name="anim_view_zoom">缩放View</string>
+    <string name="anim_layout_change">布局变更动画</string>
+    <string name="title_activity_animation">动画</string>
+</resources>

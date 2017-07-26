@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">TrainDemoHK</string>
+    <string name="title_tab_train">Train</string>
+    <string name="title_tab_practice">Practice</string>
     <string name="title_activity_custom_action_bar">CustomActionBarActivity</string>
 
     <string name="save_data_preference">Save to Preference</string>
@@ -8,8 +10,17 @@
 
     <string name="manage_audio_in_volume">Increase the volume</string>
     <string name="manage_audio_de_volume">Decrease the volume</string>
-    <string name="camera_take_photo">Take Vedio</string>
+    <string name="camera_take_photo">Take photo</string>
     <string name="camera_take_video">Take video</string>
 
     <string name="lorem_ipsum">nothing</string>
+
+
+
+    <string name="anim_cross_fade">Cross Fade Animation</string>
+    <string name="anim_screen_slide">Screen Slide Animation</string>
+    <string name="anim_card_flip">Card Flip Animation</string>
+    <string name="anim_view_zoom">View Zoom Animation</string>
+    <string name="anim_layout_change">Layout Change Animation</string>
+    <string name="title_activity_animation">Animation</string>
 </resources>
