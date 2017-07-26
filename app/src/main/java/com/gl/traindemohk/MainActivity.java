@@ -1,52 +1,124 @@
 package com.gl.traindemohk;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
-import com.train._4graphics_anim.AnimationActivity;
+public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
+    private static final int NUM_PAGES = 2;
+    ViewPager mViewPager;
+    private static final String TRAIN_TAG = "android_train_Fragment";
+    private static final String PRACTICE_TAG = "my_practice_Fragment";
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    static final String TAG = MainActivity.class.getSimpleName();
-    private ListView mListView;
-    private String[] data;
+    private AndroidTrainFragment trainFragment;
+    private MyPracticeFragment practiceFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mListView = (ListView) findViewById(R.id.main_list_view);
-        mListView.setOnItemClickListener(this);
 
+        mViewPager = (ViewPager) findViewById(R.id.main_viewpager);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-        data = new String[]{"1.开始", "2.Android 分享操作", "3.Android多媒体", "4.Android图像与动画", "5.Android网络操作", "6.联系人"};
-        adapter.addAll(data);
+        createFragment(savedInstanceState);
+        mViewPager.addOnPageChangeListener(this);
 
+        MyPageAdapter adapter = new MyPageAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(adapter);
 
-        mListView.setAdapter(adapter);
     }
 
+    private void createFragment(Bundle savedInstanceState) {
+        final FragmentManager manager = getSupportFragmentManager();
+
+        if (savedInstanceState != null) {
+
+            trainFragment = (AndroidTrainFragment) manager.findFragmentByTag(TRAIN_TAG);
+            practiceFragment = (MyPracticeFragment) manager.findFragmentByTag(PRACTICE_TAG);
+
+        } else {
+            trainFragment = (AndroidTrainFragment) manager.findFragmentByTag(TRAIN_TAG);
+            practiceFragment = (MyPracticeFragment) manager.findFragmentByTag(PRACTICE_TAG);
+
+            if (trainFragment == null) {
+                trainFragment = new AndroidTrainFragment();
+            }
+            if (practiceFragment == null) {
+                practiceFragment = new MyPracticeFragment();
+            }
+
+            final FragmentTransaction transaction = manager.beginTransaction();
+            transaction.add(R.id.main_viewpager, trainFragment, TRAIN_TAG);
+            transaction.add(R.id.main_viewpager, practiceFragment, PRACTICE_TAG);
+            transaction.hide(trainFragment);
+            transaction.hide(practiceFragment);
+            transaction.commit();
+
+        }
+    }
+
+
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Log.i(TAG, "[onItemClick] position:" + i);
-        Intent intent = new Intent();
-        switch (i) {
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        switch (position) {
             case 0:
+                getSupportActionBar().setTitle(getString(R.string.app_name));
+                break;
             case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-                intent.setClass(this, AnimationActivity.class);
+                getSupportActionBar().setTitle(getString(R.string.title_fragment_my_practice));
+                break;
+            default:
+                getSupportActionBar().setTitle(getString(R.string.app_name));
                 break;
 
         }
-        startActivity(intent);
     }
+
+    @Override
+    public void onPageSelected(int position) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+
+    class MyPageAdapter extends FragmentStatePagerAdapter {
+
+
+        public MyPageAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            Log.i("wb", "[getItem]" + position);
+            Fragment fragment = null;
+            switch (position) {
+                case 0:
+                    fragment = trainFragment;
+                    break;
+                case 1:
+                    fragment = practiceFragment;
+                    break;
+                default:
+                    break;
+            }
+
+            return fragment;
+        }
+
+
+        @Override
+        public int getCount() {
+            return NUM_PAGES;
+        }
+    }
+
 }

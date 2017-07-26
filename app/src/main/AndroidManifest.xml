@@ -39,8 +39,7 @@
         <activity
             android:name="com.train._4graphics_anim.AnimationActivity"
             android:label="@string/title_activity_animation"></activity>
-        <activity android:name="com.train._4graphics_anim.CrossFadeFragment" />
-        <activity android:name="com.train._4graphics_anim.ScreenSlideFragment"></activity>
+        <activity android:name="com.gl.animation.AnimActivity" />
     </application>
 
 </manifest>
