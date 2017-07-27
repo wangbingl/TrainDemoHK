@@ -23,4 +23,8 @@
     <string name="anim_view_zoom">View Zoom Animation</string>
     <string name="anim_layout_change">Layout Change Animation</string>
     <string name="title_activity_animation">Animation</string>
+    <string name="title_activity_three_animation">Three Main Animation</string>
+    <string name="menu_frame_anim">Frame Animation</string>
+    <string name="menu_tweened_anim">Tweened Animation</string>
+    <string name="menu_property_anim">Property Animation</string>
 </resources>

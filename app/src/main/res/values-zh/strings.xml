@@ -10,4 +10,8 @@
     <string name="anim_view_zoom">缩放View</string>
     <string name="anim_layout_change">布局变更动画</string>
     <string name="title_activity_animation">动画</string>
+    <string name="title_activity_three_animation">三大动画</string>
+    <string name="menu_frame_anim">逐帧动画</string>
+    <string name="menu_tweened_anim">补间动画</string>
+    <string name="menu_property_anim">属性动画</string>
 </resources>

@@ -1,13 +1,10 @@
 package com.gl.traindemohk;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+import android.content.Intent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+
+import com.gl.animation.MyAnimActivity;
 
 /**
  * Created by wb on 17-7-26.
@@ -22,11 +19,18 @@ public class MyPracticeFragment extends BaseFragment {
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Intent intent = new Intent();
         switch (i){
             case 0:
+                intent.setClass(getActivity(), MyAnimActivity.class);
                 break;
+            case 1:
+              return;
             default:
                 break;
+
         }
+        // TODO 检查跳转
+        startActivity(intent);
     }
 }
