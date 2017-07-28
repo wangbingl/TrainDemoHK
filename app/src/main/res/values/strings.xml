@@ -34,5 +34,8 @@
     <string name="property_anim_rotation">rotation</string>
     <string name="property_anim_scale">scale</string>
     <string name="property_anim_set">set</string>
-    <string name="property_anim_xml_set">XML Animation</string>
+    <string name="property_anim_xml_set">XML</string>
+
+    <string name="property_value_anim_high">ValueAnimator High</string>
+    <string name="property_obj_anim_high">ObjectAnimator High</string>
 </resources>

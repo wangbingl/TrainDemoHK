@@ -21,6 +21,13 @@
     <string name="property_anim_rotation">旋转</string>
     <string name="property_anim_scale">缩放</string>
     <string name="property_anim_set">组合</string>
-    <string name="property_anim_xml_set">XML组合动画</string>
+    <string name="property_anim_xml_set">XML</string>
+
+    <string name="property_value_anim_high">ValueAnimator的高级用法</string>
+    <string name="property_obj_anim_high">ObjectAnimator的高级用法</string>
+
+    <!--SpannableString-->
+    <string name="spannable_string_text1">1.输入电话号码的片段就能找到TA\n\n</string>
+    <string name="spannable_string_text2">例：400-779-^6666$，可输入^6666$</string>
 
 </resources>

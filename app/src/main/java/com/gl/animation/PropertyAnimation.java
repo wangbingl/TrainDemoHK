@@ -50,6 +50,8 @@ public class PropertyAnimation extends Fragment implements View.OnClickListener 
         view.findViewById(R.id.btn_start_scale_prop_anim).setOnClickListener(this);
         view.findViewById(R.id.btn_start_set_prop_anim).setOnClickListener(this);
         view.findViewById(R.id.btn_start_xml_prop_anim).setOnClickListener(this);
+        view.findViewById(R.id.btn_start_value_anim_high).setOnClickListener(this);
+        view.findViewById(R.id.btn_start_obj_anim_high).setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +74,10 @@ public class PropertyAnimation extends Fragment implements View.OnClickListener 
                 break;
             case R.id.btn_start_xml_prop_anim:
                 startXmlPropAnimation();
+                break;
+            case R.id.btn_start_value_anim_high:
+                break;
+            case R.id.btn_start_obj_anim_high:
                 break;
         }
     }

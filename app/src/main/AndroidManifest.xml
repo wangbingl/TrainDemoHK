@@ -42,6 +42,7 @@
         <activity android:name="com.gl.animation.MyAnimActivity"
             android:label="@string/title_activity_three_animation"
             />
+        <activity android:name="com.gl.spannable.MySpannableStringActivity"/>
     </application>
 
 </manifest>
