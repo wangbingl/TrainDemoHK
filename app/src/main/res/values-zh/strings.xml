@@ -14,4 +14,13 @@
     <string name="menu_frame_anim">逐帧动画</string>
     <string name="menu_tweened_anim">补间动画</string>
     <string name="menu_property_anim">属性动画</string>
+
+    <!--属性动画-->
+    <string name="property_anim_alpha">透明度</string>
+    <string name="property_anim_move">移动</string>
+    <string name="property_anim_rotation">旋转</string>
+    <string name="property_anim_scale">缩放</string>
+    <string name="property_anim_set">组合</string>
+    <string name="property_anim_xml_set">XML组合动画</string>
+
 </resources>

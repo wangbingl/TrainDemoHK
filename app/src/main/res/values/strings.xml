@@ -27,4 +27,12 @@
     <string name="menu_frame_anim">Frame Animation</string>
     <string name="menu_tweened_anim">Tweened Animation</string>
     <string name="menu_property_anim">Property Animation</string>
+
+    <!--Property Animation-->
+    <string name="property_anim_alpha">alpha</string>
+    <string name="property_anim_move">move</string>
+    <string name="property_anim_rotation">rotation</string>
+    <string name="property_anim_scale">scale</string>
+    <string name="property_anim_set">set</string>
+    <string name="property_anim_xml_set">XML Animation</string>
 </resources>

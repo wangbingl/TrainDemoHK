@@ -3,11 +3,61 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_start_property_anim"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start" />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_start_alpha_prop_anim"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:text="@string/property_anim_alpha" />
+
+        <Button
+            android:id="@+id/btn_start_move_prop_anim"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/property_anim_move" />
+
+        <Button
+            android:id="@+id/btn_start_rotation_prop_anim"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/property_anim_rotation" />
+
+        <Button
+            android:id="@+id/btn_start_scale_prop_anim"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/property_anim_scale" />
+
+        <Button
+            android:id="@+id/btn_start_set_prop_anim"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/property_anim_set" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="@string/property_anim_xml_set"
+            android:id="@+id/btn_start_xml_prop_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 
     <ImageView
         android:id="@+id/image_for_property_anim"
