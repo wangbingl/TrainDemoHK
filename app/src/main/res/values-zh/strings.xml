@@ -27,7 +27,11 @@
     <string name="property_obj_anim_high">ObjectAnimator的高级用法</string>
 
     <!--SpannableString-->
-    <string name="spannable_string_text1">1.输入电话号码的片段就能找到TA\n\n</string>
-    <string name="spannable_string_text2">例：400-779-^6666$，可输入^6666$</string>
+
+
+    <string name="spannable_string_text1">1. 输入电话号码的片段就能找到TA\n</string>
+    <string name="spannable_string_text2">1. 例：400-779-^6666$，可输入^6666$\n\n</string>
+    <string name="spannable_string_text3">2. 输入好友名字的拼音或首字母也能找到TA\n</string>
+    <string name="spannable_string_text4">2. 例：张星星，可输入^999$，^Z$hang^X$ing^X$ing\n\n</string>
 
 </resources>
