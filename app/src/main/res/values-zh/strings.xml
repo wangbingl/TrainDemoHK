@@ -33,5 +33,6 @@
     <string name="spannable_string_text2">1. 例：400-779-^6666$，可输入^6666$\n\n</string>
     <string name="spannable_string_text3">2. 输入好友名字的拼音或首字母也能找到TA\n</string>
     <string name="spannable_string_text4">2. 例：张星星，可输入^999$，^Z$hang^X$ing^X$ing\n\n</string>
+    <string name="spannable_string_text5">免责声明:通话时长的计算仅作为参考，\n实际时长请咨询运营商</string>
 
 </resources>

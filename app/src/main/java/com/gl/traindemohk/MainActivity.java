@@ -1,13 +1,15 @@
 package com.gl.traindemohk;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import com.gl.spannable.MySpannableStringActivity;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
     private static final int NUM_PAGES = 2;
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
         MyPageAdapter adapter = new MyPageAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(adapter);
+
+        startActivity(new Intent(this, MySpannableStringActivity.class));
 
     }
 
