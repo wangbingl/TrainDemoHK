@@ -64,6 +64,17 @@
             android:name="com.gl.animation.MyAnimActivity"
             android:label="@string/title_activity_three_animation" />
         <activity android:name="com.gl.spannable.MySpannableStringActivity" />
+
+        <service android:name="com.train._5network.sync_adapter.AuthenticatorService">
+            <intent-filter >
+                <action android:name="android.accounts.AccountAuthenticator"/>
+
+
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/syncadapter"
+                />
+        </service>
     </application>
 
 </manifest>
