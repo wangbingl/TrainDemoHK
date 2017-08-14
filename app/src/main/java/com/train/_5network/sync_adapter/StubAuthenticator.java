@@ -8,7 +8,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 /**
- * Created by 王斌 on 2017/8/7.
+ *
  *
  * Add a Stub Authenticator Component
     添加一个 Stub 授权器组件

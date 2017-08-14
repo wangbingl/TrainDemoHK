@@ -2,4 +2,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="spannable_string_titleFontSize">14sp</dimen>
     <dimen name="spannable_string_subtitleSize">10sp</dimen>
+    <!-- contacts -->
+    <dimen name="contact_editor_raw_height">20dip</dimen>
 </resources>

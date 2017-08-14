@@ -35,4 +35,9 @@
     <string name="spannable_string_text4">2. 例：张星星，可输入^999$，^Z$hang^X$ing^X$ing\n\n</string>
     <string name="spannable_string_text5">免责声明:通话时长的计算仅作为参考，\n实际时长请咨询运营商</string>
 
+    <!--contacts-->
+    <string name="contact_editor_input_name_hint">请输入姓名</string>
+    <string name="contact_editor_input_phone_number_hint">请输入手机号</string>
+    <string name="contact_editor_input_seat_number_hint">请输入座机号</string>
+    <string name="contact_editor_input_email_hint">请输入邮箱</string>
 </resources>

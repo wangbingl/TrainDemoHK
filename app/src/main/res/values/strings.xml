@@ -38,4 +38,11 @@
 
     <string name="property_value_anim_high">ValueAnimator High</string>
     <string name="property_obj_anim_high">ObjectAnimator High</string>
+
+    <!--contacts-->
+
+    <string name="contact_editor_input_name_hint">please write your name</string>
+    <string name="contact_editor_input_phone_number_hint">please write your phone number</string>
+    <string name="contact_editor_input_seat_number_hint">please write your seat number</string>
+    <string name="contact_editor_input_email_hint">please write your email</string>
 </resources>

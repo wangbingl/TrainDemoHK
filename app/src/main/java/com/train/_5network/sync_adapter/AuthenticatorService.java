@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 
 
 /**
- * Created by 王斌 on 2017/8/9.
+ *
  * Bind the Authenticator to the Framework
  * 将授权器绑定到框架
  */
