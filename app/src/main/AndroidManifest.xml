@@ -75,6 +75,10 @@
                 android:resource="@xml/syncadapter"
                 />
         </service>
+
+        <!-- contacts -->
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <activity android:name="com.train._7userInfo_sign_In.contacts.ContactsActivity"></activity>
     </application>
 
 </manifest>
